@@ -1,0 +1,11 @@
+the compiler assemble "BEER =!BEER" like this
+	use cy
+;	timer.c:23: BEER = !BEER;
+	mov	c,_P3_0
+	cpl	c
+	mov  _OStickISR_sloc0_1_0,c
+	mov	_P3_0,c
+	pop	psw
+	reti
+
+it will not change the bit
